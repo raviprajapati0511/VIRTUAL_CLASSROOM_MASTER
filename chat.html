@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Chat App</title>
+
+  <!-- Font Awesome for Icons (Optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom Chat Style -->
+  <link rel="stylesheet" href="css/stylechat.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="chat-header">
+    <h1><i class="fas fa-comments"></i> Real-Time Chat App</h1>
+  </header>
+
+  <!-- Chat Container -->
+  <main class="chat-container">
+    <section class="chat-window">
+      
+      <!-- Chat Display Area -->
+      <div class="chat-messages" id="chat-messages">
+        <!-- Messages will be appended here -->
+      </div>
+
+      <!-- User Input -->
+      <div class="chat-input-area">
+        <input 
+          type="text" 
+          id="message-input" 
+          placeholder="Type your message..." 
+          autocomplete="off"
+          aria-label="Message Input" 
+        />
+        <button id="send-button" aria-label="Send Message">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS File -->
+  <script src="js/scriptchat.js"></script>
+
+</body>
+</html>

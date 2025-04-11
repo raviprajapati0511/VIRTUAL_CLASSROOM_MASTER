@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Home | Virtual Classroom</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+   <div class="flex">
+      <a href="home.html" class="logo">Virtual Classroom</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" placeholder="Search courses..." required maxlength="100" />
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="" />
+         <h3 class="name">VIN</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+   </div>
+</header>
+
+<!-- Sidebar -->
+<aside class="side-bar">
+   <div id="close-btn"><i class="fas fa-times"></i></div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" alt="" />
+      <h3 class="name">VIN</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i>Home</a>
+      <a href="about.html"><i class="fas fa-question"></i>About</a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i>Courses</a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i>Teachers</a>
+      <a href="chat.html"><i class="fas fa-comments"></i>Chat</a>
+      <a href="classroom.html"><i class="fas fa-school"></i>Classroom</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+   </nav>
+</aside>
+
+<!-- Hero -->
+<section class="hero">
+   <div class="hero-content">
+      <h1>Welcome to Virtual Classroom</h1>
+      <p>Your personalized learning journey starts here. Explore thousands of expert-taught courses and unlock your potential.</p>
+      <a href="courses.html" class="btn primary">Browse Courses</a>
+   </div>
+</section>
+
+<!-- Dashboard & Quick Stats -->
+<section class="dashboard">
+   <h2>Dashboard Overview</h2>
+   <div class="box-container">
+      <div class="box">
+         <h3>Likes</h3>
+         <p><span>25</span> total</p>
+         <a href="#">View</a>
+      </div>
+      <div class="box">
+         <h3>Comments</h3>
+         <p><span>12</span> total</p>
+         <a href="#">View</a>
+      </div>
+      <div class="box">
+         <h3>Saved Playlists</h3>
+         <p><span>4</span> playlists</p>
+         <a href="#">View</a>
+      </div>
+   </div>
+</section>
+
+<!-- Top Categories -->
+<section class="top-categories">
+   <h2>Top Categories</h2>
+   <div class="category-cards">
+      <a href="#"><i class="fas fa-code"></i> Development</a>
+      <a href="#"><i class="fas fa-chart-line"></i> Marketing</a>
+      <a href="#"><i class="fas fa-paint-brush"></i> Design</a>
+      <a href="#"><i class="fas fa-headphones"></i> Music</a>
+      <a href="#"><i class="fas fa-camera"></i> Photography</a>
+      <a href="#"><i class="fas fa-vial"></i> Science</a>
+   </div>
+</section>
+
+<!-- Popular Topics -->
+<section class="popular-topics">
+   <h2>Popular Topics</h2>
+   <div class="topic-icons">
+      <a href="#"><i class="fab fa-html5"></i> HTML</a>
+      <a href="#"><i class="fab fa-css3"></i> CSS</a>
+      <a href="#"><i class="fab fa-js"></i> JavaScript</a>
+      <a href="#"><i class="fab fa-react"></i> React</a>
+      <a href="#"><i class="fab fa-php"></i> PHP</a>
+      <a href="#"><i class="fab fa-bootstrap"></i> Bootstrap</a>
+   </div>
+</section>
+
+<!-- Featured Courses -->
+<section class="courses">
+   <h2>Featured Courses</h2>
+   <div class="course-grid">
+      <div class="course-card">
+         <img src="images/thumb-1.png" alt="" />
+         <h3>HTML for Beginners</h3>
+         <p>10 Videos</p>
+         <a href="playlist.html">View Playlist</a>
+      </div>
+      <div class="course-card">
+         <img src="images/thumb-2.png" alt="" />
+         <h3>Mastering CSS</h3>
+         <p>10 Videos</p>
+         <a href="playlist.html">View Playlist</a>
+      </div>
+      <div class="course-card">
+         <img src="images/thumb-3.png" alt="" />
+         <h3>JavaScript Essentials</h3>
+         <p>10 Videos</p>
+         <a href="playlist.html">View Playlist</a>
+      </div>
+   </div>
+   <div class="more-btn">
+      <a href="courses.html" class="btn">View All Courses</a>
+   </div>
+</section>
+
+<!-- Become a Tutor -->
+<section class="tutor-cta">
+   <h2>Become a Tutor</h2>
+   <p>Join our platform and share your knowledge with thousands of students around the world.</p>
+   <a href="teachers.html" class="btn">Get Started</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+   <p>&copy; 2025 by <span>Batch-2: Roll No. 24, 26, 29, 41</span> | All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

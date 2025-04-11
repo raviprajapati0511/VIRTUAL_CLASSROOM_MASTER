@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>User Profile | Virtual Classroom</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Virtual Classroom</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" placeholder="Search courses..." required />
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" alt="User" class="image" />
+         <h3 class="name">VIN</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+   </section>
+</header>
+
+<!-- Sidebar -->
+<aside class="side-bar">
+   <div id="close-btn"><i class="fas fa-times"></i></div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" alt="Profile" />
+      <h3 class="name">VIN</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i>Home</a>
+      <a href="about.html"><i class="fas fa-question"></i>About</a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i>Courses</a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i>Teachers</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+   </nav>
+</aside>
+
+<!-- User Profile Section -->
+<section class="user-profile">
+   <h1 class="heading">Your Profile</h1>
+
+   <div class="info">
+
+      <div class="user-card">
+         <img src="images/pic-1.jpg" alt="User Image" />
+         <h3>VIN</h3>
+         <p>Student</p>
+         <a href="update.html" class="inline-btn">Update Profile</a>
+      </div>
+
+      <div class="stats-grid">
+
+         <div class="stat-box">
+            <i class="fas fa-bookmark"></i>
+            <div>
+               <h4>4</h4>
+               <p>Saved Playlists</p>
+            </div>
+            <a href="#" class="inline-btn">View</a>
+         </div>
+
+         <div class="stat-box">
+            <i class="fas fa-heart"></i>
+            <div>
+               <h4>33</h4>
+               <p>Videos Liked</p>
+            </div>
+            <a href="#" class="inline-btn">View</a>
+         </div>
+
+         <div class="stat-box">
+            <i class="fas fa-comment"></i>
+            <div>
+               <h4>12</h4>
+               <p>Video Comments</p>
+            </div>
+            <a href="#" class="inline-btn">View</a>
+         </div>
+
+      </div>
+   </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+   &copy; 2025 by <span>Batch-2: Roll No. 24, 26, 29, 41</span> | All rights reserved.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

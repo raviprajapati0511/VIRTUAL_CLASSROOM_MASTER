@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Classroom + Chatbot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f2f2f2; }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #video-root {
+      flex: 3;
+      background: #000;
+    }
+
+    .chatbot {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-left: 2px solid #ccc;
+    }
+
+    .chat-header {
+      background: #343a40;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background: #f9f9f9;
+    }
+
+    .user-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    .user-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .user-input button {
+      padding: 10px 20px;
+      background-color: #343a40;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+
+    .user { background-color: #d1e7dd; align-self: flex-end; }
+    .bot { background-color: #e2e3e5; align-self: flex-start; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Video Classroom -->
+  <div id="video-root"></div>
+
+  <!-- Chatbot Assistant -->
+  <div class="chatbot">
+    <div class="chat-header">AI Chatbot Assistant</div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="user-input">
+      <input type="text" id="chat-input" placeholder="Type your question..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
+<!-- ZEGOCLOUD SDK -->
+<script src="https://unpkg.com/@zegocloud/zego-uikit-prebuilt/zego-uikit-prebuilt.js"></script>
+<script>
+  // Video Classroom Setup
+  function getUrlParams(url) {
+    const urlStr = url.split('?')[1];
+    const urlSearchParams = new URLSearchParams(urlStr);
+    return Object.fromEntries(urlSearchParams.entries());
+  }
+
+  window.onload = function () {
+    const roomID = getUrlParams(window.location.href)['roomID'] || (Math.floor(Math.random() * 10000) + "");
+    const userID = Math.floor(Math.random() * 10000) + "";
+    const userName = "User" + userID;
+    const appID = 571566327;
+    const serverSecret = "80fc1632d1a64bae4f3b1404fdcb722f";
+    const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, userID, userName);
+
+    const zp = ZegoUIKitPrebuilt.create(kitToken);
+    zp.joinRoom({
+      container: document.querySelector("#video-root"),
+      sharedLinks: [
+        {
+          name: 'Join Classroom',
+          url: window.location.protocol + "//" + window.location.host + window.location.pathname + '?roomID=' + roomID
+        }
+      ],
+      scenario: {
+        mode: ZegoUIKitPrebuilt.VideoConference,
+      },
+      turnOnMicrophoneWhenJoining: true,
+      turnOnCameraWhenJoining: true,
+      showMyCameraToggleButton: true,
+      showMyMicrophoneToggleButton: true,
+      showAudioVideoSettingsButton: true,
+      showScreenSharingButton: true,
+      showTextChat: true,
+      showUserList: true,
+      layout: "Auto",
+      showLayoutButton: true,
+    });
+  };
+
+  // Chatbot Logic
+  function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const chatBox = document.getElementById('chat-messages');
+    const msg = input.value.trim();
+
+    if (!msg) return;
+
+    // Display user message
+    const userMsg = document.createElement('div');
+    userMsg.className = 'message user';
+    userMsg.textContent = "You: " + msg;
+    chatBox.appendChild(userMsg);
+
+    // Bot response
+    const botResponse = document.createElement('div');
+    botResponse.className = 'message bot';
+    botResponse.textContent = "Bot: " + generateBotReply(msg);
+    chatBox.appendChild(botResponse);
+
+    input.value = '';
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  function generateBotReply(msg) {
+    msg = msg.toLowerCase();
+    if (msg.includes("hello") || msg.includes("hi")) {
+      return "Hi there! How can I help you today?";
+    } else if (msg.includes("course")) {
+      return "You can check out our courses from the 'Courses' tab.";
+    } else if (msg.includes("class") || msg.includes("video")) {
+      return "You're in the virtual classroom! Enjoy learning.";
+    } else if (msg.includes("teacher")) {
+      return "You can find teacher profiles under the 'Teachers' section.";
+    } else {
+      return "I'm still learning! Try asking about courses, classes, or teachers.";
+    }
+  }
+</script>
+</body>
+</html>

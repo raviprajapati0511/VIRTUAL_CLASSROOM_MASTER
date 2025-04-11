@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Login | Virtual Classroom</title>
+
+   <!-- Font Awesome for icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Virtual Classroom</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" placeholder="Search courses..." required />
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+      </div>
+   </section>
+</header>
+
+<aside class="side-bar">
+   <div id="close-btn"><i class="fas fa-times"></i></div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" alt="Profile Image" class="image" />
+      <h3 class="name">VIN</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i>Home</a>
+      <a href="about.html"><i class="fas fa-question"></i>About</a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i>Courses</a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i>Teachers</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+   </nav>
+</aside>
+
+<!-- Login Section -->
+<section class="form-container login-page">
+   <div class="form-box">
+      <div class="form-left">
+         <img src="images/login-side-img.svg" alt="Login Illustration" />
+         <h2>Welcome Back!</h2>
+         <p>Log in to access your courses, dashboard, and more.</p>
+      </div>
+      <form class="form-right" action="" method="post" enctype="multipart/form-data">
+         <h3>Login Now</h3>
+         <label for="email">Email <span>*</span></label>
+         <input type="email" name="email" id="email" placeholder="Enter your email" required class="box" />
+         
+         <label for="password">Password <span>*</span></label>
+         <input type="password" name="pass" id="password" placeholder="Enter your password" required class="box" />
+         
+         <input type="submit" value="Login" name="submit" class="btn" />
+         <p>Don’t have an account? <a href="register.html">Register here</a></p>
+      </form>
+   </div>
+</section>
+
+<footer class="footer">
+   &copy; 2025 by <span>Batch-2: Roll No. 24, 26, 29, 41</span> | All rights reserved.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

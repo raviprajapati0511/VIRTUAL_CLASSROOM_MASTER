@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Video Playlist | Virtual Classroom</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Virtual Classroom</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" placeholder="Search courses..." required />
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="Profile Image" />
+         <h3 class="name">VIN</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+   </section>
+</header>
+
+<!-- Sidebar -->
+<aside class="side-bar">
+   <div id="close-btn"><i class="fas fa-times"></i></div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" alt="Profile Image" />
+      <h3 class="name">VIN</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i>Home</a>
+      <a href="about.html"><i class="fas fa-question"></i>About</a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i>Courses</a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i>Teachers</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+   </nav>
+</aside>
+
+<!-- Playlist Details -->
+<section class="playlist-details">
+   <h1 class="heading">Playlist Overview</h1>
+   <div class="row">
+
+      <div class="column left">
+         <form method="post" class="save-playlist">
+            <button type="submit"><i class="far fa-bookmark"></i> Save Playlist</button>
+         </form>
+         <div class="thumb">
+            <img src="images/thumb-1.png" alt="Playlist Thumbnail" />
+            <span>10 videos</span>
+         </div>
+      </div>
+
+      <div class="column right">
+         <div class="tutor">
+            <img src="images/pic-2.jpg" alt="Tutor" />
+            <div>
+               <h3>John Deo</h3>
+               <span>Uploaded on: 21-10-2022</span>
+            </div>
+         </div>
+
+         <div class="details">
+            <h3>Complete HTML Tutorial</h3>
+            <p>This playlist will take you through HTML from scratch. It is perfect for beginners and intermediate learners who want to strengthen their foundation in web development.</p>
+            <a href="teacher_profile.html" class="inline-btn">View Teacher Profile</a>
+         </div>
+      </div>
+
+   </div>
+</section>
+
+<!-- Playlist Videos -->
+<section class="playlist-videos">
+   <h1 class="heading">Video Lessons</h1>
+
+   <div class="box-container">
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/post-1-1.png" alt="">
+         <h3>HTML Tutorial (Part 01)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/post-1-2.png" alt="">
+         <h3>HTML Tutorial (Part 02)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/post-1-3.png" alt="">
+         <h3>HTML Tutorial (Part 03)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/post-1-4.png" alt="">
+         <h3>HTML Tutorial (Part 04)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/post-1-5.png" alt="">
+         <h3>HTML Tutorial (Part 05)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/post-1-6.png" alt="">
+         <h3>HTML Tutorial (Part 06)</h3>
+      </a>
+
+   </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+   &copy; 2025 by <span>Batch-2: Roll No. 24, 26, 29, 41</span> | All rights reserved.
+</footer>
+
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

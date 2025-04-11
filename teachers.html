@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Meet Our Teachers</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+   <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Virtual Classroom</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" placeholder="Search courses..." required />
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="Profile" />
+         <h3 class="name">VIN</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+   </section>
+</header>
+
+<!-- Sidebar -->
+<aside class="side-bar">
+   <div id="close-btn"><i class="fas fa-times"></i></div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" alt="Profile" />
+      <h3 class="name">VIN</h3>
+      <p class="role">Student</p>
+      <a href="profile.html" class="btn">View Profile</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i>Home</a>
+      <a href="about.html"><i class="fas fa-question"></i>About</a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i>Courses</a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i>Teachers</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+   </nav>
+</aside>
+
+<!-- Teachers Section -->
+<section class="teachers">
+   <h1 class="heading">Meet Our Experts</h1>
+
+   <form action="" method="post" class="search-tutor">
+      <input type="text" name="search_box" placeholder="Search tutors..." required maxlength="100" />
+      <button type="submit" class="fas fa-search" name="search_tutor"></button>
+   </form>
+
+   <div class="box-container">
+
+      <div class="box offer highlight">
+         <h3>Become a Tutor</h3>
+         <p>Share your knowledge with the world and shape the future of learners. Join our community of educators today.</p>
+         <a href="register.html" class="inline-btn">Get Started</a>
+      </div>
+
+      <!-- Sample tutor profile box -->
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-2.jpg" alt="Tutor Image" />
+            <div>
+               <h3>John Deo</h3>
+               <span>Web Developer</span>
+            </div>
+         </div>
+         <div class="details">
+            <p><strong>Playlists:</strong> 4</p>
+            <p><strong>Videos:</strong> 18</p>
+            <p><strong>Likes:</strong> 1208</p>
+         </div>
+         <a href="teacher_profile.html" class="inline-btn">View Profile</a>
+      </div>
+
+      <!-- Clone the above block with different tutor images/details -->
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-3.jpg" alt="" />
+            <div><h3>Jane Smith</h3><span>UI/UX Designer</span></div>
+         </div>
+         <div class="details">
+            <p><strong>Playlists:</strong> 3</p>
+            <p><strong>Videos:</strong> 12</p>
+            <p><strong>Likes:</strong> 890</p>
+         </div>
+         <a href="teacher_profile.html" class="inline-btn">View Profile</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-4.jpg" alt="" />
+            <div><h3>Akash Mehra</h3><span>Machine Learning</span></div>
+         </div>
+         <div class="details">
+            <p><strong>Playlists:</strong> 5</p>
+            <p><strong>Videos:</strong> 22</p>
+            <p><strong>Likes:</strong> 2043</p>
+         </div>
+         <a href="teacher_profile.html" class="inline-btn">View Profile</a>
+      </div>
+
+      <!-- Repeat similar blocks or dynamically populate using JS/PHP -->
+
+   </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+   &copy; 2025 by <span>Batch-2: Roll No. 24, 26, 29, 41</span> | All rights reserved.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
